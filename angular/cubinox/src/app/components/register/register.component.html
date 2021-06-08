@@ -1,0 +1,28 @@
+
+<div class="login-wrapper">
+    <form #registerForm="ngForm" class="login" (ngSubmit)="registerUser() && registerForm.valid">
+        <section class="title">
+            <h2 class="welcome">Book-App</h2>
+            <h4>Create New Account</h4>
+        </section>
+        <div class="login-group">
+
+            <clr-input-container>
+                <input type="text" #register="ngModel" required pattern="[A-Za-z\s]{5,}$"   name="username" clrInput placeholder="Username"
+                    [(ngModel)]="registerUserData.username" />
+                    <clr-control-error>Username must be more than 5 letters.</clr-control-error>
+            </clr-input-container>
+            <h5 class="text-danger" *ngIf="userExist">UserId already exist please try by giving different <b> UserId</b> </h5>
+
+            <clr-password-container>
+                <input type="password" #password='ngModel' required pattern="[A-Za-z0-9]{8,}$"  name="password" clrPassword placeholder="Password"
+                    [(ngModel)]="registerUserData.password" />
+                    <clr-control-error>Password must be more than 8 character.</clr-control-error>
+
+            </clr-password-container>
+
+            <button type="submit" [disabled]='register.invalid || password.invalid' class="btn btn-primary">REGISTER</button>    
+            <h5> Have an account? <a routerLink="/login" class="signup"><u>Login</u></a></h5>
+        </div>
+    </form>
+</div>

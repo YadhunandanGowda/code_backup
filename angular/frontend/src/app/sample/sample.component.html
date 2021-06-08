@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<input type="text" name="" id="" [(ngModel)]="title">
+
+<p *ngFor="let item of itemSet" (click)="delete(item)">{{item}}</p>
+
+<form #myform="ngForm" (submit)="submitItem()">
+    <input type="text" placeholder="Title" #name="ngModel" name="title" [(ngModel)]="item"  required/>
+    <button type="submit" [disabled]="!name.valid">Submit</button>
+</form>

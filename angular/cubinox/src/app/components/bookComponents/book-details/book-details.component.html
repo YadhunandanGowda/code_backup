@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<div class="details" *ngIf="book">
+  <form #bookDetails="ngForm">
+    <section class="form-block">
+
+      <div class="others">
+        <label>
+          <h2>Book Details</h2>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Book ISBN : </h4>
+        </label>
+        <h4>{{book.isbn | titlecase}}</h4>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Book Title : </h4>
+        </label>
+        <h4>{{book.bookTitle | titlecase}}</h4>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Book Author(s) : </h4>
+        </label>
+        <div *ngIf="book.author.length">
+          <div *ngFor="let auth of book.author; index as i">
+            <h4 class="authorName" (click)="authorDetails(auth.authorId)">{{i+1}}. <strong>{{auth.firstName | titlecase}}
+                {{auth.lastName | titlecase}}</strong> &nbsp;</h4>
+          </div>
+        </div>
+        <div *ngIf="!book.author.length" >
+              <h4 class="noAuthors">No Authors for this book</h4>
+          </div>
+        
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Book Description : </h4>
+        </label>
+        <h4>{{book.description | titlecase}}</h4>
+      </div>
+
+      <div class="others">
+        <button routerLink="/listBook" class="btn btn-primary">Back</button>
+      </div>
+    </section>
+  </form>
+</div>

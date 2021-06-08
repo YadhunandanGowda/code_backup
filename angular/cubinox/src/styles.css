@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@clr/ui/clr-ui.min.css';
+
+/* Book Styles */
+
+div.router {
+    margin-left: 2em;
+}
+
+div a:active {
+    color: rgb(230, 215, 5);
+}
+div.add-container {
+    display: flex;
+    margin-left: 20px;
+}
+
+div.list {
+    margin-top: 2em;
+    /* margin-right: 2em; */
+}
+div.content-type {
+    display: flex;
+    margin-left: 20px;
+    flex-flow: column;
+    max-width: 900px;;
+}
+div.addbook {
+    max-width: 100%;
+    justify-content: space-around;
+    display: flex;
+    margin-top: 1em;
+}
+div textarea {
+    max-width: 325px;
+}
+div.titles {
+    margin-left: 3em;
+}
+div.others {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 350px;
+    display: flex;
+    /* justify-content: space-around; */
+}
+div h2 {
+    color: rgba(15, 15, 15, 0.651);
+    font-weight: bold;
+}

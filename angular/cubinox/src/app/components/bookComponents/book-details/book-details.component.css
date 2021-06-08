@@ -1,0 +1,10 @@
+.authorName {
+cursor: pointer;
+}
+.authorName:hover {
+    color: blue;
+}
+
+.noAuthors {
+    color: red;
+}

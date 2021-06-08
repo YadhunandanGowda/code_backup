@@ -1,0 +1,47 @@
+
+<div class="list">
+  <div *ngIf="authors.length; else noData">
+    <h2>Authors list</h2>
+    <h5 class='text-danger' *ngIf='cannotDelete'> Author has assigned to some Book, Hence Cannot Delete this Author </h5>
+    <clr-datagrid>
+        <clr-dg-column>Sl.no</clr-dg-column>
+      <clr-dg-column>FirstName</clr-dg-column>
+      <clr-dg-column>LastName</clr-dg-column>
+      <clr-dg-column>Email</clr-dg-column>
+      <clr-dg-column></clr-dg-column>
+
+      <clr-dg-row *ngFor="let author of authors; index as i; let index=index" (mouseover)="hovered=index" (mouseout)="hovered=index">
+          <clr-dg-cell (click)="detail(author.authorId)">{{index + 1}}</clr-dg-cell>
+        <clr-dg-cell (click)="detail(author.authorId)">{{author.firstName | titlecase}}</clr-dg-cell>
+        <clr-dg-cell (click)="detail(author.authorId)">{{author.lastName | titlecase}}</clr-dg-cell>
+        <clr-dg-cell (click)="detail(author.authorId)">{{author.email}}</clr-dg-cell>
+        <clr-dg-cell><span *ngIf="index==hovered"><i (click)="edit(author.authorId)" class="fa fa-pencil-square-o"
+              aria-hidden="true"></i> </span> &nbsp; &nbsp; &nbsp;
+          <span *ngIf="index==hovered"><i (click)="delete(author.authorId, i)" class="fa fa-trash-o" aria-hidden="true"></i>
+          </span>
+        </clr-dg-cell>
+
+
+      </clr-dg-row>
+
+      <clr-dg-footer>{{authors.length}} Author(s)</clr-dg-footer>
+    </clr-datagrid>
+    <div class="addbook">
+        <button routerLink="/addAuthor" class="btn btn-primary">Add Author</button>
+      </div>
+  </div>
+
+  <ng-template #noData>
+    <clr-datagrid>
+      <clr-dg-column>No Data</clr-dg-column>
+
+      <clr-dg-row>
+        <clr-dg-cell>You have no data in your account!! <br> <br>
+          You can add by <button class='btn' (click)="addNew()">clicking</button>here !
+        </clr-dg-cell>
+      </clr-dg-row>
+
+      <clr-dg-footer></clr-dg-footer>
+    </clr-datagrid>
+  </ng-template>
+</div>

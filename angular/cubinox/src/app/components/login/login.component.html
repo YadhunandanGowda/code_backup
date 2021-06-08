@@ -1,0 +1,27 @@
+
+<div class="login-wrapper">
+    <form class="login" #loginForm='ngForm' (ngSubmit)="loginUser() && loginForm.valid">
+        <section class="title">
+            <h3 class="welcome">Welcome to</h3>
+            Book-App
+            <h4 class="hint">Login</h4>
+        </section>
+        <div class="login-group">
+            <clr-input-container>
+                <input type="text" #username='ngModel' id="login_username" required name="username" clrInput placeholder="Username" [(ngModel)]="loginUserData.username" />
+                <clr-control-error>UserName is required!</clr-control-error>
+            </clr-input-container> 
+
+            <clr-password-container>
+                <input type="password" #password='ngModel' id="login_password" required name="password" clrPassword placeholder="Password" [(ngModel)]="loginUserData.password" />
+                <clr-control-error>password is required!</clr-control-error>
+            </clr-password-container>
+            
+            <div *ngIf ="errorMsg" class="error active">
+                Invalid user name or password
+            </div>
+            <button type="submit" [disabled]='username.invalid || password.invalid' class="btn btn-primary">Login</button>
+            <h5>Don't have an account? <a routerLink="/register" class="signup"><u>Register</u></a></h5>
+        </div>
+    </form>
+</div>

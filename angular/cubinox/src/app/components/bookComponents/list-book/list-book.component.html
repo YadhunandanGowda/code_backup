@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<div class="list">
+  <div *ngIf="books.length; else noData">
+    <h2>Books List</h2>
+    <clr-datagrid>
+      <clr-dg-column>Sl.no</clr-dg-column>
+      <clr-dg-column>ISBN no</clr-dg-column>
+      <clr-dg-column>Books</clr-dg-column>
+      <clr-dg-column></clr-dg-column>
+
+      <clr-dg-row *ngFor="let book of books; index as i; let index=index" (mouseover)="hovered=index" (mouseout)="hovered=index">
+        <clr-dg-cell>{{index +1}}</clr-dg-cell>
+        <clr-dg-cell (click)="bookDetails(book.bookId)">{{book.isbn | titlecase}}</clr-dg-cell>
+        <clr-dg-cell (click)="bookDetails(book.bookId)">{{book.bookTitle | titlecase}}</clr-dg-cell>
+        <clr-dg-cell><span *ngIf="index==hovered"><i (click)="editBook(book.bookId)" class="fa fa-pencil-square-o"
+          aria-hidden="true"></i> </span> &nbsp; &nbsp; &nbsp;
+      <span *ngIf="index==hovered"><i (click)="bookDelete(book.bookId, i)" class="fa fa-trash-o" aria-hidden="true"></i>
+      </span>
+    </clr-dg-cell>
+
+      </clr-dg-row>
+      <clr-dg-footer>{{books.length}} Book(s)</clr-dg-footer>
+    </clr-datagrid>
+    <div class="addbook">
+      <button routerLink="/addBook" class="btn btn-primary">New Book</button>
+    </div>
+  </div>
+
+  <ng-template #noData>
+    <clr-datagrid>
+      <clr-dg-column>No Data</clr-dg-column>
+
+      <clr-dg-row>
+        <clr-dg-cell>You have no data in your account!! <br> <br>
+          You can add by <button class='btn' routerLink="/addBook">clicking</button>here !
+        </clr-dg-cell>
+      </clr-dg-row>
+
+      <clr-dg-footer></clr-dg-footer>
+    </clr-datagrid>
+  </ng-template>
+
+</div>

@@ -1,0 +1,53 @@
+<form #authorForm="ngForm" (ngSubmit)="onSubmit()">
+  <section class="form-block">
+    <label>Author Form</label>
+    <div class="form-group">
+      <label for="FirstName" class="control-lable">First name</label>
+      <label for="FirstName" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+        [class.invalid]="firstNameInput.invalid && (firstNameInput.dirty || firstNameInput.touched)">
+        <input type="text" id="FirstName" placeholder="Enter first name" required pattern="[A-Za-z]{2,}$" name="firstName"
+          [(ngModel)]="author.firstName" #firstNameInput="ngModel" size="40">
+        <span class="tooltip-content"> First Name is Required and it should be more than 2 character. </span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="LastName">Last name</label>
+      <label for="LastName" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+        [class.invalid]="lastNameInput.invalid && (lastNameInput.dirty || lastNameInput.touched)">
+        <input type="text" id="LastName" placeholder="Enter last name" required pattern="[A-Za-z\s.]{1,}$" name="lastName"
+          [(ngModel)]="author.lastName" #lastNameInput="ngModel" size="40">
+        <span class="tooltip-content"> Last Name is Required and it should be more than 1 character. </span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <label for="email" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+        [class.invalid]="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+        <input type="email" id="email" placeholder="Enter email" required pattern="^\w.+@[a-zA-Z_-]+?\.[a-zA-Z]{2,3}$"
+          name="email" [(ngModel)]="author.email" #emailInput="ngModel" size="40">
+        <span class="tooltip-content"> Email is Required and enter valid one.</span>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="select">
+        <select name="gender" [(ngModel)]="author.gender" #genderInput="ngModel" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group" width="auto">
+      <label for="bio">Biography</label>
+      <textarea id="bio" placeholder="Enter biodata" required #descriptionInput="ngModel"
+      name="bio" [(ngModel)]="author.bio" rows="5" maxlength="2000"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit" [disabled]="authorForm.form.invalid">Add</button>
+  </section>
+</form>

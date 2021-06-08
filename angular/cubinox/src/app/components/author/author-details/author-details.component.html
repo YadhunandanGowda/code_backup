@@ -1,0 +1,45 @@
+
+<div class="details" *ngIf="author">
+  <form #bookDetails="ngForm">
+    <section class="form-block">
+
+      <div class="others">
+        <label>
+          <h2>Author Details</h2>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Author Name :</h4>
+        </label>
+        <h4>{{ author.firstName | titlecase }} {{author.lastName | titlecase}}</h4>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Email : </h4>
+        </label>
+        <h4>{{author.email}}</h4>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Gender : </h4>
+        </label>
+        <h4>{{author.gender | titlecase}}</h4>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <h4>Bio : </h4>
+        </label>
+        <h5>{{author.bio | titlecase}}</h5>
+      </div>
+
+      <div class="others">
+        <button routerLink="/listAuthor" class="btn btn-primary">Back</button>
+      </div>
+    </section>
+  </form>
+</div>

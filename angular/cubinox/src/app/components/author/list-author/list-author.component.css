@@ -1,0 +1,13 @@
+span:hover{
+    color: red;
+    cursor: pointer;
+}
+
+clr-dg-cell {
+    cursor: pointer;
+}
+
+.list {
+    padding-left: 100px;
+    padding-right: 100px;
+}

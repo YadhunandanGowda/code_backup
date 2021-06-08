@@ -1,0 +1,59 @@
+
+<div *ngIf="author">
+  <form #authorForm="ngForm" (ngSubmit)="update()">
+    <section class="form-block">
+      <label>Author Update Form</label>
+      <div class="form-group">
+        <label for="FirstName">First name</label>
+        <label for="FirstName" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+          [class.invalid]="firstNameInput.invalid && (firstNameInput.dirty || firstNameInput.touched)">
+          <input type="text" id="FirstName" placeholder="Enter first name" required name="firstName" [(ngModel)]="author.firstName"
+            #firstNameInput="ngModel" size="40">
+          <span class="tooltip-content"> First Name is Required. </span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="LastName">Last name</label>
+        <label for="LastName" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+          [class.invalid]="lastNameInput.invalid && (lastNameInput.dirty || lastNameInput.touched)">
+          <input type="text" id="LastName" placeholder="Enter last name" required name="lastName" [(ngModel)]="author.lastName"
+            #lastNameInput="ngModel" size="40">
+          <span class="tooltip-content"> Last Name is Required. </span>
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email</label>
+        <label for="email" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+          [class.invalid]="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+          <input type="text" id="email" placeholder="Enter email" required name="email" [(ngModel)]="author.email"
+            #emailInput="ngModel" size="40">
+          <span class="tooltip-content"> Email is Required.</span>
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <label for="bio" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-md"
+          [class.invalid]="bioInput.invalid && (bioInput.dirty || bioInput.touched)">
+          <input type="text" id="bio" placeholder="Enter biodata" required name="bio" [(ngModel)]="author.bio"
+            #bioInput="ngModel" size="40">
+          <span class="tooltip-content"> Bio is Required. </span>
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <label>Gender</label>
+          <div class="select">
+            <select name="gender" [(ngModel)]="author.gender" #genderInput="ngModel">
+              <option value="male">Male</option>
+              <option value="female">Female</option>onSubmit
+              <option value="others">Others</option>
+            </select>
+          </div>
+      </div>
+  
+      <button class="btn btn-primary" type="submit" [disabled]="authorForm.form.invalid" >Add</button>
+    </section>
+  </form>
+</div>

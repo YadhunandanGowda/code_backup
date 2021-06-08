@@ -1,0 +1,51 @@
+<header>
+    <div class="logoContainer">
+        <!-- <Link to="/"> -->
+        <img src="/assets/sitelogo.svg" alt="Company Logo" />
+        <!-- </Link> -->
+    </div>
+    <div class="searchBox">
+        <input type="text" placeholder="Search Products" />
+        <button>
+            <fa-icon [icon]="faSearch"></fa-icon>
+        </button>
+    </div>
+    <div class="menu">
+        <div class="option">
+            <a href="javascript:void(0)">Profile</a>
+            <ul class="dropdown">
+                <li><i>
+                        <fa-icon [icon]="faEdit"></fa-icon>
+                    </i> Edit Profile</li>
+                <li><i>
+                        <fa-icon [icon]="faBoxOpen"></fa-icon>
+                    </i> Orders</li>
+                <li><i>
+                        <fa-icon [icon]="faHeart"></fa-icon>
+                    </i> Whislist</li>
+                <li><i>
+                        <fa-icon [icon]="faPowerOff"></fa-icon>
+                    </i> Logout</li>
+            </ul>
+        </div>
+        <div class="option">
+            <a href="javascript:void(0)">More</a>
+            <ul class="dropdown">
+                <li><i>
+                        <fa-icon [icon]="faBell"></fa-icon>
+                    </i> Notification</li>
+                <li><i>
+                        <fa-icon [icon]="faPhoneAlt"></fa-icon>
+                    </i> 24x7 Customer Care</li>
+                <li><i>
+                        <fa-icon [icon]="faCog"></fa-icon>
+                    </i> Settings</li>
+            </ul>
+        </div>
+        <div class="option">
+            <a href="javascript:void(0)"><i>
+                    <fa-icon [icon]="faShoppingCart"></fa-icon>
+                </i> Cart</a>
+        </div>
+    </div>
+</header>
