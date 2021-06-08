@@ -1,0 +1,18 @@
+<svg id="excel" xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="140" cy="140" r="140" fill="#008134"/>
+  <g id="Group_11" data-name="Group 11" transform="translate(54.087 57.836)">
+    <path id="Path_14" data-name="Path 14" d="M98.9,252.111l102.485,17.981V105.754L98.9,123.735Z" transform="translate(-98.898 -105.754)" fill="#46b000"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="64.364" height="128.378" transform="translate(107.472 17.98)" fill="#46b000"/>
+  </g>
+  <g id="Group_12" data-name="Group 12" transform="translate(81.187 88.849)">
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="16.183" height="17.621" transform="translate(80.371)" fill="#fff"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="16.183" height="17.621" transform="translate(80.371 28.231)" fill="#fff"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="16.183" height="17.621" transform="translate(80.371 56.462)" fill="#fff"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="16.183" height="17.621" transform="translate(80.371 84.692)" fill="#fff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="28.23" height="17.621" transform="translate(104.823)" fill="#fff"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="28.23" height="17.621" transform="translate(104.823 28.231)" fill="#fff"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="28.23" height="17.621" transform="translate(104.823 56.462)" fill="#fff"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="28.23" height="17.621" transform="translate(104.823 84.692)" fill="#fff"/>
+    <path id="Path_15" data-name="Path 15" d="M190.969,207.943h-11.7l-8.844,15.7-8.844-15.7h-11.7l14.692,26.08-16.131,28.634h11.7L170.429,244.4l10.283,18.254h11.7l-16.131-28.634Z" transform="translate(-148.451 -183.069)" fill="#fff"/>
+  </g>
+</svg>

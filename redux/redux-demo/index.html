@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+progress {
+    vertical-align: baseline;
+}
+        .blog-post progress {
+    background-color: transparent;
+    border: none;
+    color: #ff8f0f;
+    height: 3px;
+    left: 0;
+    position: fixed;
+    top: 65px;
+    width: 100%;
+    z-index: 10;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.blog-post .progress-container {
+    background-color: transparent;
+    display: block;
+    height: 5px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007aa6;
+    transition: width .6s ease;
+}
+.blog-post .progress-bar {
+    background-color: #ff8f0f;
+    display: block;
+    height: inherit;
+    width: 0%;
+    z-index: 10;
+}
+
+    </style>
+</head>
+<body>
+    <div class="blog blog-post">
+        <progress value="2900" max="10743">
+            <div class="progress-container">
+                <span class="progress-bar"></span>
+            </div>
+        </progress>
+    </div>
+    <h1 id="title">Hello World</h1>
+    <script src="./dist/bundle.js"></script>
+    <script>
+        document.addEventListener("scroll", function(e) {
+        document.querySelector("progress").setAttribute("max", e.target.scrollingElement.scrollHeight-590);
+            document.querySelector("progress").value = e.target.scrollingElement.scrollTop;
+            
+        })
+    </script>
+</body>
+</html>

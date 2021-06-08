@@ -1,0 +1,13 @@
+@import './header.scss';
+
+$color: pink;
+
+.parent {
+    @include displayFlex(100px 0px , flex);
+    h1 {
+        &.header {
+            font-size: 50px;
+        }
+        color: $color;
+    }
+}

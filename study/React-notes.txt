@@ -1,0 +1,48 @@
+
+https://btholt.github.io/complete-intro-to-react-v6/
+
+
+What is React?
+It is Open source javascript library to create user interface
+
+
+points :
+React has component based architecture
+reuseable code
+can easily integrate react into any application eaither a small page or an entire application
+
+npx is npm package runner which get installed with node
+npm approach for npx create-react-app => npm install create-react-app -g and just use create-react-app <app-name>
+
+
+Virtual DOM virtual representation of actual DOM
+ 
+react create copy of actual DOM
+when we manipulate any one element the virtual DOM will only update that perticular element in real DOM
+which save lot of effort and time.
+only update what ever actually needed
+instead rerendering whole DOM React Virtual DOM will update necessary elements
+
+
+
+diff types of event handlers
+
+this.functionName.bind(this)
+use arrow function onClick={()=>{this.functionName}}
+above 2 have preformance issue
+
+in constructor add
+this.functinName = this.functionName.bind(this);
+and in onClick={this.functionName}
+
+fourth approach functionName = ()=> {
+    this.setState({
+        key: value
+    })
+}
+
+
+component lifecycle
+
+1. componentWillMount
+2. componentDidMount

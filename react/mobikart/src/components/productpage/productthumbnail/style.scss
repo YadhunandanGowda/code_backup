@@ -1,0 +1,105 @@
+.productionSection {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .productChild {
+        position: relative;
+        margin: 20px;
+        width: 250px;
+        border-radius: 2px;
+        transform: scale(1);
+        transition: all 0.3s;
+        cursor: pointer;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+         rgba(176, 184 ,192, 0.35) 0px -2px 6px 0px inset;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .prodImg {
+            display: flex;
+            img {
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                width: 100%;
+            }
+        }
+        .prodInfo {
+            padding: 10px;
+            .prodName {
+                overflow: hidden;
+                .prodbrand , .prodDesc {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    color: rgb(153, 153, 153);
+                }
+                .prodDesc {
+                    color: black;
+                }
+            }
+            .prodPrice {
+                display: flex; 
+                align-items: center;
+
+                p {
+                    padding: 5px;
+                }
+                .final {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    i {
+                       font-size: 1rem;
+                   }
+                }
+                .real {
+                    color: gray;
+                    text-decoration-line: line-through; 
+                    
+                    i {
+                        font-size: 12px;
+                        margin-right: 2px;
+                    }
+                }
+
+                .discount {
+                    color: green;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:900px) {
+    .productionSection { 
+        .productChild {
+        margin: 10px;
+    }}
+}
+
+@media only screen and (max-width:480px) {
+    .productionSection { 
+        .productChild {
+            display: flex;
+            align-items: center; 
+            width: 100%;
+            box-shadow: rgba(99 ,99, 99 , 0.2) 0px 2px 8px 0px;
+
+            .prodImg {
+                flex: 3;
+            }
+
+            .prodInfo {
+                padding: 10px;
+                flex: 4;
+                overflow: hidden;
+            }
+        }
+}
+}

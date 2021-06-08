@@ -1,0 +1,127 @@
+.parent {
+    padding-top: 150px;
+    display: flex;
+    position: relative;
+    flex-flow: wrap;
+}
+
+.parent .child {
+    padding:20px 30px;
+    width: 55%;
+    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 22%);
+    border-radius: 10px;
+    min-height: 300px;
+    color: white;
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+
+
+.parent .child.right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.aboutUsComponent {
+    padding: 20px 50px;
+}
+
+.title {
+    margin: 0px;
+}
+
+
+.parent .child .extraPadding {
+    padding-right: 35%;
+}
+
+.parent .child .imgSec {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.parent .child .imgSec .indImg{
+    flex: 1;
+    margin: 20px;
+}
+
+.parent .child .imgSec .indImg img {
+    border-radius: 10px;
+}
+
+.dealerTrustSec {
+    margin: 50px auto 30px;
+}
+
+.dealerTrustCntr {
+    display: flex;
+    justify-content: space-around;
+}
+
+.dealerTrustCntr .indivDelImg {
+    margin: 0px 20px;
+    box-shadow: 0px 0px 10px 1px rgb(128 128 128 / 38%);
+    border-radius: 6px;
+}
+
+
+.dealerTrustCntr .indivDelImg img{
+    border-radius: 6px;
+}
+
+.dealerTitle {
+    color: #005724;
+}
+
+.dealerTrustCntr .indivDelImg p.desp {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    color: #005724;
+    padding: 0px 10px;
+}
+
+
+
+@media only screen and (max-width:900px ) {
+.dealerTrustCntr .indivDelImg {
+    margin: 0px 5px;
+}
+}
+
+
+
+@media only screen and (max-width:480px ) {
+.dealerTrustCntr .indivDelImg {
+    margin: 20px 20px;
+}
+.aboutUsComponent {
+    padding: 20px 10px;
+}
+.parent .child .imgSec .indImg {
+    flex: 100%;
+    margin: 5px 10px;
+}
+.parent .child {
+    padding: 10px 15px;
+    margin: 10px;
+    width: 100%;
+}
+
+.parent .child.right {
+    position: relative;
+}
+
+.parent {
+    padding-top: 0px;
+}
+
+.dealerTrustCntr {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+}

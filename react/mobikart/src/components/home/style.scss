@@ -1,0 +1,41 @@
+
+
+.categotySection {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.loading {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        position: relative;
+        left: 0px;
+        color: rgb(198, 198, 255);
+        font-size: 1.6rem;
+        animation: load 1s infinite;
+    }
+
+    @keyframes load {
+        0%{
+            left: -10px;
+        }
+        50% {
+            left: 10px;
+        }
+        100% {
+            left: -10px;
+        }
+    }
+}

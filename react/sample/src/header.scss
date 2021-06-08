@@ -1,0 +1,6 @@
+
+@mixin displayFlex($padding, $flex){
+    display: $flex;
+    justify-content: center;
+    padding: $padding;
+}

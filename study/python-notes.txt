@@ -1,0 +1,4 @@
+studying version 3.9
+
+python prefers snake case for declaring variables ex: first_name , permanent_address
+helpful REPL methods: help() type() dir()
